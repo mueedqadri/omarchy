@@ -1,0 +1,3 @@
+vicinae-bin
+windsurf
+zen-browser-bin
