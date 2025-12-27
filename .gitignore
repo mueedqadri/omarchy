@@ -7,3 +7,10 @@
 
 # Optional: Ignore the swap files created by Vim/NeoVim if you use them
 *.swp
+
+# Ignore the backup script itself (optional, but keeps the repo clean)
+scripts/hypr-backup.sh
+
+# Ignore git locks
+*.lock
+.git/
