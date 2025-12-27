@@ -1,3 +1,9 @@
-*.log
-*.tmp
-./shaders/*.glsl
+# Ignore all log and temp files anywhere in the folder
+**/*.log
+**/*.tmp
+
+# Ignore all shaders regardless of which subfolder they are in
+**/shaders/*.glsl
+
+# Optional: Ignore the swap files created by Vim/NeoVim if you use them
+*.swp
