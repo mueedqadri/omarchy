@@ -1,0 +1,76 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* --- Global Reset & High-Visibility Font --- */
+* {
+    background-color: @background;
+    color: @foreground;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    /* JetBrainsMono Nerd Font provides better icon scaling for big bars */
+    font-family: 'JetBrainsMono Nerd Font', 'CaskaydiaMono Nerd Font Mono';
+    font-size: 14px; /* High-visibility size for clear icons */
+}
+
+/* --- Container Alignment --- */
+.modules-left { margin-left: 12px; }
+.modules-right { margin-right: 12px; }
+
+/* --- THE FIX: Standardized Large Widgets --- */
+/* Every module now has a fixed 'box' size to prevent uneven spacing */
+#idle_inhibitor,
+#bluetooth,
+#network,
+#memory,
+#cpu,
+#battery,
+#pulseaudio,
+#power-profiles-daemon,
+#custom-update,
+#custom-screenrecording-indicator {
+    padding: 0 8px;     /* Comfortable internal spacing */
+    margin: 0 1px;      /* Clear separation between modules */
+    min-width: 20px;    /* Guaranteed footprint for every icon */
+}
+
+/* --- Workspaces --- */
+#workspaces button {
+    padding: 0 6px;
+    margin: 0 3px;
+    font-size: 16px; /* Slightly smaller than status icons for hierarchy */
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+}
+
+/* --- Specific Module Alignment --- */
+#clock {
+    font-weight: bold;
+    font-size: 16px; /* Text looks better slightly smaller than pure icons */
+    padding: 0 15px;
+}
+
+#custom-omarchy {
+    font-size: 18px; /* The "Anchor" logo - largest element on the bar */
+    margin-right: 15px;
+}
+
+/* --- Status Colors --- */
+#bluetooth.disabled, 
+#bluetooth.off {
+    color: #585b70;
+}
+
+#network.disconnected {
+    color: #f38ba8;
+}
+
+#battery.charging {
+    color: #a6e3a1;
+}
+
+/* --- Tray --- */
+#tray {
+    padding: 0 12px;
+}
